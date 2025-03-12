@@ -1,63 +1,63 @@
 /*
-1.Create a Java program that acts as a simple calculator.
+● Create a Java program that acts as a simple calculator.
 ● The program should prompt the user to enter two numbers and an operator (+, -,*, /).
 ● Perform the corresponding calculation based on the operator.
 ● Handle potential exceptions, such as division by zero or invalid operator input.
 ● Display the result or an appropriate error message.
 */
-import java.util.InputMismatchException;
-import java.util.Scanner;
-class calculator{
-    public static void main(String args[]){
-       Scanner sc=new Scanner(System.in);
-       String ch="y",op;
-       double a,b;
 
-while(ch.equalsIgnoreCase("y")){
-    try{
-        System.out.print("Enter value of a : ");
-         a=sc.nextInt();
-        System.out.print("Enter value of b : ");
-         b=sc.nextInt();
-        System.out.print("Enter your choice (+, -, *, /) : ");
-        sc.nextLine();
-        op=sc.nextLine(); 
-            switch (op) {
+import java.util .InputMis
+ 
+        java.util  . Scanner;
+           
+         alculato r 
+
+                  Scanner  sc 
              
-            case "+": System.out.println("Adition is : "+(a+b));
-                      break;
+                         double a, b; 
+                      
+                        while (ch.equalsIgnoreCase("y"))
+                              try
+                                System.out.print("Enter value of
+                              
+                                  S
+                            b
 
-            case "-": System.out.println("Substraction is : "+(a-b));
-                      break;
+                            s
+                        .nextLi    
+                        
 
-            case "/": 
-                    if(b==0){
-                        throw new ArithmeticException("Zero Divsion Error");
-                    }
-                    else{
-                        System.out.println("Division is : "+(a/b));
-                    }
-                   break;
+                             
+                           (op) {        
+                          
 
-            case "*":System.out.println("Multiplication is : "+(a*b));
-                     break;
-                   
-            default:
+                             
+                                 Sy s
+                              brea
+                               
+                                  Sy st e    
+                         
+                              
 
-                   throw new IllegalArgumentException("Please Enter valid operation +,-,/ or * ");
-            }    
-    }
-    catch(ArithmeticException e){
-        System.out.println(e);
+                             
+                                
+                              
+
+                            
+
+                                bre
+                
+                
+                                     break;
+                            
+                                      
+                                   System.out. p
+                                      System.out.print l n( 
+                             } catch (InputMismatchException   e) 
+                      System.out.println("Enter only Number" + e);
+            }  
+         
+             
             }
-    catch(IllegalArgumentException e){
-        System.out.println(e);
     }
-    catch(InputMismatchException e){
-     System.out.println("Enter only Number"+e);
-      }
-            System.out.print("Do you Want to execute agin (y/n) ? : ");
-            ch=sc.nextLine();
-        }
-}
 }
